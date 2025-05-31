@@ -1,2 +1,21 @@
+
+
+
+
+
+<<<<<<< HEAD
 # Auto detect text files and perform LF normalization
 * text=auto
+=======
+*.h5 filter=lfs diff=lfs merge=lfs -text
+>>>>>>> 0857618 (initial commit with model and code)
+*.h5    filter=lfs diff=lfs merge=lfs-text
+*.keras filter =lfs diff =lfs merge =lfs-text
+
+
+#(keep any other patterns the remote had) another
+
+-pattern export -ignore
+
+
+

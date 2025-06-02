@@ -7,7 +7,7 @@ from tensorflow.keras.preprocessing import image as keras_image
 # Load your trained CNN model (load once)
 @st.cache_resource(show_spinner=False)
 def load_model():
-    return tf.keras.models.load_model('e:/PESTICIDE PROJECT/pesticide_cnn_model.keras')
+    return tf.keras.models.load_model('pesticide_cnn_model.keras')
 
 model = load_model()
 

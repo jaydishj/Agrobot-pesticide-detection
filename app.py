@@ -127,7 +127,7 @@ def classification_page():
 
         # Display your logo (update the path accordingly)
         try:
-            logo_path = 'c:/Users/Admin/Downloads/ChatGPT Image Apr 4, 2025, 03_01_29 PM (1).png'  # Change this to your actual logo file path
+            logo_path = 'MY_LOGO.png'  # Change this to your actual logo file path
             logo_img = Image.open(logo_path)
             st.image(logo_img, width=150)
         except Exception as e:

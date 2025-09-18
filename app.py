@@ -1,3 +1,29 @@
+import streamlit as st
+
+# Custom CSS for background
+page_bg = """
+<style>
+[data-testid="stAppViewContainer"] {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(0,0,0,0);
+}
+
+[data-testid="stSidebar"] {
+    background-color: rgba(255,255,255,0.6);
+}
+</style>
+"""
+
+st.markdown(page_bg, unsafe_allow_html=True)
+
+st.title("🌿 Custom Background Streamlit App")
+st.write("This app has a custom background using CSS!")
 
 import streamlit as st
 import tensorflow as tf
@@ -142,5 +168,6 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 

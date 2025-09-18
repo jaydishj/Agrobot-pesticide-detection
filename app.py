@@ -1,4 +1,33 @@
 import streamlit as st
+
+# Custom CSS for Green Pastures theme
+page_bg = """
+<style>
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(to right, #a8e063, #56ab2f); /* Green gradient */
+    background-image: url("https://www.transparenttextures.com/patterns/leaf.png"); /* Leaf pattern */
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(0,0,0,0); /* Transparent header */
+}
+
+[data-testid="stSidebar"] {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white sidebar */
+    border-radius: 12px;
+    padding: 10px;
+}
+</style>
+"""
+
+st.markdown(page_bg, unsafe_allow_html=True)
+
+st.title("🌱 Green Pastures")
+st.write("Welcome to the nature-inspired Streamlit app with leaf-themed background.")
+
+import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
@@ -141,3 +170,4 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+

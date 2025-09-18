@@ -2,54 +2,25 @@ import streamlit as st
 
 page_bg = """
 <style>
-body {
-  margin:0;
-  overflow:hidden;
-}
-
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+    background: url("https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif");
+    background-size: cover;
+    background-position: center;
 }
-
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200%;
-  height: 100px;
-  background: url("https://i.ibb.co/wQZVxxk/wave.png");
-  background-size: 50% 100px;
-  animation: wave 8s linear infinite;
-  opacity: 0.7;
+[data-testid="stHeader"], [data-testid="stToolbar"] {
+    background: rgba(0,0,0,0);
 }
-
-.wave:nth-of-type(2) {
-  bottom: 10px;
-  animation: wave 12s linear infinite;
-  opacity: 0.5;
-}
-
-.wave:nth-of-type(3) {
-  bottom: 20px;
-  animation: wave 16s linear infinite;
-  opacity: 0.3;
-}
-
-@keyframes wave {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+[data-testid="stSidebar"] {
+    background: rgba(255,255,255,0.6);
+    border-radius: 12px;
 }
 </style>
-
-<div class="wave"></div>
-<div class="wave"></div>
-<div class="wave"></div>
 """
 
 st.markdown(page_bg, unsafe_allow_html=True)
+st.title("🌊 Ocean Waves Animation")
+st.write("This version uses a looping GIF of ocean waves as background.")
+
 
 
 
@@ -197,6 +168,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

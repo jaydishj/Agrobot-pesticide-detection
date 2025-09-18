@@ -22,8 +22,7 @@ page_bg = """
 
 st.markdown(page_bg, unsafe_allow_html=True)
 
-st.title("🌿 Custom Background Streamlit App")
-st.write("This app has a custom background using CSS!")
+
 
 import streamlit as st
 import tensorflow as tf
@@ -168,6 +167,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

@@ -109,12 +109,15 @@ def welcome_page():
     - Improper pesticide application causes contamination of soil and water.
     - Accurate identification helps farmers choose the right pesticide and dosage.
     
-    
-    
     ---
     
     Use the **Classification** page from the sidebar to upload pesticide images and get instant classification with detailed info.
     """)
+
+    # --- Navigation Button ---
+    if st.button("➡ Go to Classification_Page"):
+        st.session_state["page"] = "classification"
+        st.experimental_rerun()
 
 def classification_page():
     st.title("🧪 Pesticide Classification & Detailed Information")
@@ -160,6 +163,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

@@ -1,21 +1,22 @@
 import streamlit as st
 
-# Custom CSS for background
 page_bg = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle at 1px 1px, #e6e6e6 1px, transparent 0);
+    background-size: 20px 20px;
+    background-repeat: repeat;
 }
 
 [data-testid="stHeader"] {
-    background: rgba(0,0,0,0);
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(6px);
 }
 
 [data-testid="stSidebar"] {
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.8);
+    backdrop-filter: blur(6px);
 }
 </style>
 """
@@ -165,6 +166,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

@@ -116,7 +116,7 @@ def welcome_page():
 
     # --- Navigation Button ---
     if st.button("➡ Go to Classification_Page"):
-        st.session_state["page"] = "classification"
+        st.session_state["page"] = "classification_page"
         st.rerun()
 
 
@@ -164,6 +164,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

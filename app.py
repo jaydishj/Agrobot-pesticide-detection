@@ -117,7 +117,8 @@ def welcome_page():
     # --- Navigation Button ---
     if st.button("➡ Go to Classification_Page"):
         st.session_state["page"] = "classification"
-        st.experimental_rerun()
+        st.rerun()
+
 
 def classification_page():
     st.title("🧪 Pesticide Classification & Detailed Information")
@@ -163,6 +164,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

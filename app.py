@@ -114,10 +114,7 @@ def welcome_page():
     Use the **Classification** page from the sidebar to upload pesticide images and get instant classification with detailed info.
     """)
 
-    # --- Navigation Button ---
-    if st.button("➡ Go to Classification_Page"):
-        st.session_state["page"] = "classification"
-        st.rerun()
+
 
 
 def classification_page():
@@ -164,6 +161,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

@@ -4,22 +4,24 @@ page_bg = """
 <style>
 [data-testid="stAppViewContainer"] {
     background-color: #ffffff;
-    background-image: radial-gradient(circle at 1px 1px, #e6e6e6 1px, transparent 0);
-    background-size: 20px 20px;
-    background-repeat: repeat;
+    background-image:
+        linear-gradient(#f2f2f2 1px, transparent 1px),
+        linear-gradient(90deg, #f2f2f2 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px; /* offset to make a brick-like effect */
 }
 
 [data-testid="stHeader"] {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.85);
     backdrop-filter: blur(6px);
 }
 
 [data-testid="stSidebar"] {
     background-color: rgba(255,255,255,0.8);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px);
+    border-right: 1px solid #ddd;
 }
 </style>
-"""
 
 st.markdown(page_bg, unsafe_allow_html=True)
 
@@ -166,6 +168,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

@@ -1,25 +1,27 @@
 import streamlit as st
 
+
 page_bg = """
 <style>
 [data-testid="stAppViewContainer"] {
     background-color: #ffffff;
     background-image:
-        linear-gradient(#f2f2f2 1px, transparent 1px),
-        linear-gradient(90deg, #f2f2f2 1px, transparent 1px);
-    background-size: 40px 40px;
-    background-position: 0 0, 20px 20px; /* offset to make a brick-like effect */
+        linear-gradient(#dcdcdc 3px, transparent 3px),
+        linear-gradient(90deg, #dcdcdc 3px, transparent 3px);
+    background-size: 60px 40px; /* horizontal x vertical brick size */
+    background-position: 0 0, 30px 20px; /* offset for staggered brick effect */
 }
 
 [data-testid="stHeader"] {
     background: rgba(255,255,255,0.85);
     backdrop-filter: blur(6px);
+    border-bottom: 2px solid #e0e0e0;
 }
 
 [data-testid="stSidebar"] {
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.85);
     backdrop-filter: blur(8px);
-    border-right: 1px solid #ddd;
+    border-right: 2px solid #ddd;
 }
 </style>
 """
@@ -168,6 +170,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

@@ -5,10 +5,9 @@ page_bg = """
 <style>
 [data-testid="stAppViewContainer"] {
     background-color: #ffffff;
-    background-image:
-        linear-gradient(#e0e0e0 2px, transparent 2px),
-        linear-gradient(90deg, #e0e0e0 2px, transparent 2px);
-    background-size: 50px 50px;
+    background-image: repeating-radial-gradient(circle at 0 0, #f0f0f0, #f0f0f0 2px, transparent 2px, transparent 40px),
+                      repeating-radial-gradient(circle at 50px 50px, #f0f0f0, #f0f0f0 2px, transparent 2px, transparent 40px);
+    background-size: 100px 100px;
 }
 [data-testid="stHeader"], [data-testid="stSidebar"] {
     background-color: rgba(255,255,255,0.85);
@@ -161,6 +160,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

@@ -1,19 +1,7 @@
 import streamlit as st
 
 
-page_bg = """
-<style>
-[data-testid="stAppViewContainer"] {
-    background-color: #ffffff;
-    background-image: repeating-radial-gradient(circle at 0 0, #f0f0f0, #f0f0f0 2px, transparent 2px, transparent 40px),
-                      repeating-radial-gradient(circle at 50px 50px, #f0f0f0, #f0f0f0 2px, transparent 2px, transparent 40px);
-    background-size: 100px 100px;
-}
-[data-testid="stHeader"], [data-testid="stSidebar"] {
-    background-color: rgba(255,255,255,0.85);
-    backdrop-filter: blur(6px);
-}
-</style>
+tyle>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
 
@@ -161,6 +149,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

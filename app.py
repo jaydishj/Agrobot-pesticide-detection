@@ -1,8 +1,7 @@
 import streamlit as st
 
 
-tyle>
-"""
+
 st.markdown(page_bg, unsafe_allow_html=True)
 
 import streamlit as st
@@ -149,6 +148,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

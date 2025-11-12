@@ -1,8 +1,3 @@
-import streamlit as st
-
-
-
-st.markdown(page_bg, unsafe_allow_html=True)
 
 import streamlit as st
 import tensorflow as tf
@@ -148,6 +143,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

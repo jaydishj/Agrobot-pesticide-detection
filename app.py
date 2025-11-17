@@ -5,6 +5,18 @@ import numpy as np
 from PIL import Image
 from tensorflow.keras.preprocessing import image as keras_image
 
+
+st.markdown("""
+<link rel="manifest" href="/.pwa/manifest.json">
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/.pwa/service-worker.js");
+  });
+}
+</script>
+""", unsafe_allow_html=True)
+
 # Load your trained CNN model (load once)
 @st.cache_resource(show_spinner=False)
 def load_model():
@@ -143,6 +155,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

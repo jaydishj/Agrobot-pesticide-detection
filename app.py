@@ -34,9 +34,6 @@ body {
 """, unsafe_allow_html=True)
 
 # ---------------- LOAD CSV -----------------
-species_df = pd.read_csv("species_list.csv")
-species_map = dict(zip(species_df['class_id'], species_df['species_name']))
-
 # ---------------- LOAD MODEL -----------------
 model = tf.keras.models.load_model("model.h5")
 
@@ -202,6 +199,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

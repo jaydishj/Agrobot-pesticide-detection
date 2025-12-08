@@ -37,11 +37,8 @@ body {
 # ---------------- LOAD MODEL -----------------
 
 # ---------------- LOAD LOTTIE -----------------
-def load_lottie(path):
-    with open(path, "r") as f:
-        return json.load(f)
 
-animation = load_lottie("assets/animation.json")
+
 
 # ---------------- UI TITLE -----------------
 st.title("🦋 AI Insect Species Identifier")
@@ -198,6 +195,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

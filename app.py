@@ -7,55 +7,7 @@ from tensorflow.keras.preprocessing import image as keras_image
 from streamlit_lottie import st_lottie
 import json
 
-st.markdown("""
-<style>
-body {
-    background: #F2F5F9;
-}
-.upload-btn {
-    background: linear-gradient(45deg,#667eea,#764ba2);
-    color: white;
-    padding: 12px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-}
-.result-box {
-    background: white;
-    padding: 18px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    font-size: 20px;
-    text-align: center;
-    border-left: 6px solid #667eea;
-}
-</style>
-""", unsafe_allow_html=True)
 
-# ---------------- LOAD CSV -----------------
-# ---------------- LOAD MODEL -----------------
-
-# ---------------- LOAD LOTTIE -----------------
-
-
-
-# ---------------- UI TITLE -----------------
-st.title("🦋 AI Insect Species Identifier")
-st.write("World’s First Genus–Species Level AI Insect Identification App")
-
-st_lottie(animation, height=200)
-
-st.markdown("""
-<link rel="manifest" href="/.pwa/manifest.json">
-<script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/.pwa/service-worker.js");
-  });
-}
-</script>
-""", unsafe_allow_html=True)
 
 # Load your trained CNN model (load once)
 @st.cache_resource(show_spinner=False)
@@ -195,6 +147,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

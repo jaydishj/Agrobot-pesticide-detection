@@ -35,7 +35,6 @@ body {
 
 # ---------------- LOAD CSV -----------------
 # ---------------- LOAD MODEL -----------------
-model = tf.keras.models.load_model("model.h5")
 
 # ---------------- LOAD LOTTIE -----------------
 def load_lottie(path):
@@ -199,6 +198,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 

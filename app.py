@@ -4,7 +4,54 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 from tensorflow.keras.preprocessing import image as keras_image
+from streamlit_lottie import st_lottie
+import json
 
+st.markdown("""
+<style>
+body {
+    background: #F2F5F9;
+}
+.upload-btn {
+    background: linear-gradient(45deg,#667eea,#764ba2);
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.result-box {
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 20px;
+    text-align: center;
+    border-left: 6px solid #667eea;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# ---------------- LOAD CSV -----------------
+species_df = pd.read_csv("species_list.csv")
+species_map = dict(zip(species_df['class_id'], species_df['species_name']))
+
+# ---------------- LOAD MODEL -----------------
+model = tf.keras.models.load_model("model.h5")
+
+# ---------------- LOAD LOTTIE -----------------
+def load_lottie(path):
+    with open(path, "r") as f:
+        return json.load(f)
+
+animation = load_lottie("assets/animation.json")
+
+# ---------------- UI TITLE -----------------
+st.title("🦋 AI Insect Species Identifier")
+st.write("World’s First Genus–Species Level AI Insect Identification App")
+
+st_lottie(animation, height=200)
 
 st.markdown("""
 <link rel="manifest" href="/.pwa/manifest.json">
@@ -155,6 +202,7 @@ if page == "Welcome":
     welcome_page()
 elif page == "Classification":
     classification_page()
+
 
 
 
